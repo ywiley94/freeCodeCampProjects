@@ -1,0 +1,199 @@
+<html>
+
+
+
+<head>
+    
+   <title>Javascript</title> 
+    
+    <style type="text/css">
+    
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+        }
+        
+        #box{
+            
+            width:200px;
+            height:200px;
+            background-clip: blue;
+            display: none;
+            position: relative;
+            
+        }
+    
+        #square {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            position: relative;
+            display: none;
+            
+        }
+    
+    </style>
+    
+
+</head>
+    
+    
+    <body>
+        
+        <h1>Test your reaction time!</h1>
+        
+        <p>Click on the boxes and circles as quickly as you can. <br>Your reaction time will be posted below:</p>
+        
+        <p> Your Reaction Time is: <span id = "printReactionTime"></span></p>
+        
+        
+        
+        <div id = "square">
+        
+        
+        
+        </div>
+        
+        
+        
+    
+        <script type="text/javascript">
+            
+            var start = new Date().getTime();
+            
+            
+            function getRandomColor() {
+                
+                var letters = "0123456789ABCDEF".split("");
+                
+                var color = "#";
+                
+                for(var i =0; i < 6; i++){
+                    color += letters[Math.floor(Math.random()* 16)];
+                }
+                
+                return color;
+                
+            }
+            
+            
+            
+            
+            
+            function  makeShapeAppear(){
+                
+            var top = Math.random() * 400;
+            var left = Math.random() * 400;
+            var width = Math.random() * 200 + 100;
+            
+            
+            if (Math.random() > 0.5) {
+                
+                document.getElementById("square").style.borderRadius = "50%";
+                
+            } else {
+                document.getElementById("square").style.borderRadius = "0";
+            }
+        document.getElementById("square").style.backgroundColor = getRandomColor();
+            
+        document.getElementById("square").style.height = width + "px";
+                
+        document.getElementById("square").style.top = top + "px";
+                
+        document.getElementById("square").style.left = left + "px";
+        
+        document.getElementById("square").style.width = width + "px";
+        document.getElementById("square").style.display = "block";
+                
+                start = new Date().getTime();
+                
+                
+            
+            }
+            
+            function appearAfterDelay(){
+                
+                  setTimeout(makeShapeAppear, Math.random() * 2000);
+                
+            }
+            
+              appearAfterDelay();
+                    
+            
+            document.getElementById("square").onclick = function(){    
+            document.getElementById("square").style.display = "none";
+                
+            
+                var end = new Date().getTime();
+                var timeTaken = (end - start) / 1000;
+                document.getElementById("printReactionTime").innerHTML = timeTaken
+             + "s";
+            
+                appearAfterDelay();
+            }
+            
+            
+            
+            
+            
+        </script>
+    
+    
+    
+    
+    </body>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
