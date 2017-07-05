@@ -1,0 +1,28 @@
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("file:///Users/mac/Downloads/alex-jodoin-246078.jpg");
+    background-size:cover;      
+}
+
+#randomQuoteSection {
+    text-align: center;
+    padding-top: 100px;
+    
+}
+.btn {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 8px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    
+}
+
+.styleQuote {
+    
+    font-size: 26px;
+}
