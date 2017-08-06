@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikipedia Viewer</title>
+    
+    <link rel ="stylesheet" type="text/css" href = "wikiStyle.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/9b2f28a5c2.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+
+
+    
+</head>
+    
+    
+<body style="background-color: darkred;">
+   
+<div id = 'webLogo' class='container'>
+    <i class="fa fa-rocket fa-5x" aria-hidden="true"></i>
+    <h1> Wikipedia Viewer </h1>
+    <h4>freeCodeCamp Project</h4>
+    <input id="searchTerm" type = "text" placeholder="Search for... ">
+    
+        <button id="search" class="w3-btn w3-black w3-round-xxlarge" type="button"> Search</button>
+        
+    <button id = "randomBtn"class="w3-btn w3-black w3-round-xxlarge" type="button"><a target="blank" href="https://en.wikipedia.org/wiki/Special:Random" >I'm feeling lucky!</a></button>
+    
+    <ul id="output" class= "list-group">
+    
+    </ul>
+        
+    
+</div>
+    
+    
+<script src="wikiViewer.js"></script>
+    
+</body>
+
+</html>
